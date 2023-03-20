@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 import requests
-from d import Connector
-from datetime import datetime
+from connector import *
+
 class Engine(ABC):
     @abstractmethod
     def get_request(self,word,num):
