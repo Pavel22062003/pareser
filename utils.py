@@ -1,6 +1,4 @@
 
-from cl import *
-import json
 
 def min_salary(value,file_name):
     """Функци выводит вакансии, согласно мин требованиям по зарплате"""
