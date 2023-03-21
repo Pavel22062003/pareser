@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 import requests
 from connector import *
-
+from datetime import datetime
 class Engine(ABC):
     @abstractmethod
     def get_request(self,word,num):
@@ -85,6 +85,7 @@ class HH(Engine):
             data.append(c)
             counter += 1
         con.insert(data) #вызов метода класса коннектор - insert для записи в файл
+
 
     def select_from_file(self,query:dict,job_name):
         """метод выбирает данные из json файла согласно значению словаря query,также получает название профессии и предаёт его в метод get_connector"""
